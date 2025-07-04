@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin "daisyui";
+@theme {
+  --color-main: #fe9808;
+  --color-secondary-100: #e2e2d5;
+  --color-secondary-200: #888883;
+  --color-dark: #111111;
+  --container-padding: 1.5rem;
+  --color-mint-500: oklch(0.72 0.11 178);
+}
+html {
+  scroll-behavior: smooth;
+}
+@layer utilities {
+  :root {
+    --color-base-100: #ffffff;
+    --color-base-content: #111111;
+  }
+  html.dark {
+    --color-base-100: var(--color-dark);
+    --color-base-content: #ffffff;
+  }
+
+  .bg-theme {
+    background-color: var(--color-base-100);
+  }
+  /* .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .text-dark {
+    color: var(--color-dark);
+  }
+  .bg-dark {
+    background-color: var(--color-dark);
+  }
+
+  .bg-secondary-100 {
+    background-color: var(--color-secondary-100);
+  }
+  .bg-secondary-200 {
+    background-color: var(--color-secondary-200);
+  }
+
+  .text-secondary-100 {
+    color: var(--color-secondary-100);
+  }
+  .text-secondary-200 {
+    color: var(--color-secondary-200);
+  } */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  .dark .slick-dots li button:before {
+    color: white !important; /* اللون في الوضع الداكن */
+  }
+}
