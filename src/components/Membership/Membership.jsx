@@ -1,4 +1,4 @@
-import { skillsData } from "./MembershipData";
+import { skillsData } from "./membershipData";
 
 function Membership() {
   return (
